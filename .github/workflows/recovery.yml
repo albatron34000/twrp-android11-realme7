@@ -1,7 +1,4 @@
 
-# This is taken from https://github.com/Area69Lab/Recovery-Builder-NoKernel
-# All credits goes to above repo
-
 name: Building recovery
 
 on:
@@ -13,10 +10,10 @@ env:
   MANIFEST: git://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp.git
   MANIFEST_BRANCH: twrp-11
   DEVICE: RMX2001
-  DT_LINK: https://github.com/albatron34000/twrp-android11-realme7.git
+  DT_LINK: https://github.com/HemanthJabalpuri/twrp_realme_RMX2001
   DT_PATH: device/realme/RMX2001
   TARGET: recoveryimage
-  TZ: Africa/Algeria
+  TZ: Asia/Kolkata
 
 jobs:
   build:
@@ -44,6 +41,7 @@ jobs:
         mkdir work
         cd work
         repo init -u $MANIFEST -b $MANIFEST_BRANCH --depth=1 --groups=all,-notdefault,-device,-darwin,-x86,-mips
+        repo sync -j4
         repo sync
         git clone $DT_LINK --depth=1 --single-branch $DT_PATH
 
