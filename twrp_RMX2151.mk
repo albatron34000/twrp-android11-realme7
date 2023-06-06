@@ -32,10 +32,10 @@ PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.0-impl-mock.recovery
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := RMX2001
-PRODUCT_NAME := twrp_RMX2001
+PRODUCT_DEVICE := RMX2151
+PRODUCT_NAME := twrp_RMX2151
 PRODUCT_BRAND := realme
-PRODUCT_MODEL := RMX2001
+PRODUCT_MODEL := RMX2151
 PRODUCT_MANUFACTURER := realme
 
 # HACK: Set vendor patch level
