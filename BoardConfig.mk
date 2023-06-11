@@ -142,8 +142,6 @@ BOARD_HAS_LARGE_FILESYSTEM := true
 
 
 # TWRP specific build flags
-TARGET_SCREEN_WIDTH := 1080
-TARGET_SCREEN_HEIGHT != 1920
 TW_THEME := portrait_hdpi
 RECOVERY_SDCARD_ON_DATA := true
 BOARD_CHARGER_DISABLE_INIT_BLANK := true
@@ -159,12 +157,13 @@ TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
 TARGET_USES_MKE2FS := true
 TW_EXCLUDE_TWRPAPP := true
-TW_INCLUDE_LOGICAL := oppo_product oppo_engineering preload_common
-TW_SUPPORT_INPUT_1_2_HAPTICS := true
+TW_INCLUDE_LOGICAL := product oppo_engineering preload_common
 TW_OZIP_DECRYPT_KEY := 0000
-TW_Y_OFFSET := 115
-TW_H_OFFSET := -115
-TW_CUSTOM_CPU_TEMP_PATH := /sys/class/power_supply/battery/temp
+TW_INCLUDE_RESETPROP := true
+TW_INCLUDE_REPACKTOOLS := true
+TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone3/temp
+TW_Y_OFFSET := 15
+TW_H_OFFSET := -80
 
 # exFAT FS Support
 TW_INCLUDE_FUSE_EXFAT := true
